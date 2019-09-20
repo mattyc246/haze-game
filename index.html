@@ -35,13 +35,6 @@
         <button id="play-btn">Start Saving</button>
       </div>
       <div id="inGame" style="display:none;">
-        <div id="smoke-overlay">
-          <img
-            id="smokeImage"
-            src="./images/smoke-overlay.png"
-            alt="smoke-overlay"
-          />
-        </div>
         <div id="life-bar">
           <h3>API:</h3>
           <div id="api-1" class="api-box api-yellow"></div>
@@ -57,12 +50,22 @@
           <h5 id="timer">Time: 0</h5>
         </div>
         <div id="fan-box"></div>
-        <img
-          id="malaysia-flag"
-          src="./images/malaysia-country.png"
-          width="350"
-          alt="malaysia-flag"
-        />
+        <div id="malaysia-flag">
+          <div id="smoke-overlay">
+            <img id="smokeImage-2" src="./images/smoke-2.png" alt="smoke2" />
+            <img
+              id="smokeImage"
+              src="./images/smoke-overlay.png"
+              alt="smoke-overlay"
+            />
+          </div>
+          <img
+            src="./images/malaysia-country.png"
+            width="350"
+            alt="malaysia-flag"
+            style="height: 100%;"
+          />
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

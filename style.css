@@ -161,12 +161,25 @@ body {
 }
 
 #smokeImage {
-  position: absolute;
-  top: 35px;
-  width: 100%;
-  height: 93.8%;
+  height: 100%;
   z-index: 0;
   opacity: 0;
+}
+
+#smokeImage-2 {
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+}
+
+#smoke-overlay {
+  height: 118px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #timer {
@@ -184,4 +197,9 @@ body {
   background-image: url("./images/fan.gif");
   background-size: cover;
   /* transform: translate(-50%); */
+}
+
+.haze-cloud {
+  width: 30px;
+  position: absolute;
 }
