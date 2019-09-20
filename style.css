@@ -103,7 +103,7 @@ body {
   color: #77b0ff;
 }
 
-#title-wrapper h3 {
+#title-wrapper h4 {
   color: #77b0ff;
 }
 
@@ -137,10 +137,10 @@ body {
 }
 
 .api-box {
-  width: 4%;
+  width: 10%;
   border: 1px solid white;
   border-radius: 2px;
-  margin: 4px;
+  margin: 5px;
   opacity: 0;
 }
 

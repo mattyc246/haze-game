@@ -1,5 +1,5 @@
 let time = 0;
-let lives = 10;
+let lives = 5;
 let currentAPI = 1;
 let leftBoundary = 20;
 let rightBoundary = 330;
@@ -79,7 +79,7 @@ function playRound() {
           clearTimeout(timer);
         } else {
           $(`#api-${currentAPI}`).css("opacity", 1);
-          smokeOp = smokeOp + 0.15;
+          smokeOp = smokeOp + 0.2;
           $(`#smokeImage`).css("opacity", smokeOp);
           $(`#smokeImage-2`).css("opacity", smokeOp);
           currentAPI++;
