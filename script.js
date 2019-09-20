@@ -77,6 +77,7 @@ function playRound() {
         if (lives == 0) {
           clearInterval(play);
           clearTimeout(timer);
+          $("#modal-container").fadeIn("slow");
         } else {
           $(`#api-${currentAPI}`).css("opacity", 1);
           smokeOp = smokeOp + 0.2;
@@ -91,6 +92,9 @@ function playRound() {
 }
 
 $(document).ready(() => {
+  $("#close-button").click(() => {
+    $("#modal-container").fadeOut("slow");
+  });
   $("#play-btn").click(() => {
     $("#beforeGame").fadeOut(1000, () => {
       $("#inGame").fadeIn(1000, () => {
