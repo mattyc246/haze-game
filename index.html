@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+    <title>NEXT Academy - Haze Away</title>
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="beforeGame">
+        <div id="title-wrapper">
+          <h1 id="game-title">Save Malaysia From The Haze</h1>
+        </div>
+        <button id="play-btn">Start Saving</button>
+      </div>
+      <div id="inGame" style="display:none;">
+        <div id="smoke-overlay">
+          <img
+            id="smokeImage"
+            src="./images/smoke-overlay.png"
+            alt="smoke-overlay"
+          />
+        </div>
+        <div id="life-bar">
+          <h3>API:</h3>
+          <div id="api-1" class="api-box api-yellow"></div>
+          <div id="api-2" class="api-box api-yellow"></div>
+          <div id="api-3" class="api-box api-orange"></div>
+          <div id="api-4" class="api-box api-orange"></div>
+          <div id="api-5" class="api-box api-red"></div>
+          <div id="api-6" class="api-box api-red"></div>
+          <div id="api-7" class="api-box api-purple"></div>
+          <div id="api-8" class="api-box api-purple"></div>
+          <div id="api-9" class="api-box api-maroon"></div>
+          <div id="api-10" class="api-box api-maroon"></div>
+          <h5 id="timer">Time: 0</h5>
+        </div>
+        <div id="fan-box"></div>
+        <img
+          id="malaysia-flag"
+          src="./images/malaysia-country.png"
+          width="350"
+          alt="malaysia-flag"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
