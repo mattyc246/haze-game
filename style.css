@@ -103,6 +103,10 @@ body {
   color: #77b0ff;
 }
 
+#title-wrapper h3 {
+  color: #77b0ff;
+}
+
 #inGame {
   height: 100%;
   width: 100%;
