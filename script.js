@@ -8,7 +8,7 @@ let cloudCount = 1;
 let play;
 let timer;
 let smokeOp = 0;
-let gameSpeed = 1200;
+let gameSpeed = 1800;
 
 function startPlaying() {
   play = setInterval(() => {
@@ -37,7 +37,7 @@ function startPoint() {
 function playRound() {
   cloudCount++;
   if (time % 15 == 0) {
-    gameSpeed += 200;
+    gameSpeed -= 200;
   }
   $("#life-bar").after(
     `<img id="cloud-${cloudCount}" class="haze-cloud" src="./images/haze-cartoon.png">`
