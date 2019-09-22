@@ -43,8 +43,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: black;
+  background: linear-gradient(115deg, black, black, #2e2e2e, #474747);
   border: 1px solid black;
+  border-radius: 5px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -86,7 +87,7 @@ body {
 
 #play-btn {
   position: absolute;
-  top: 60%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 175px;
@@ -112,11 +113,14 @@ body {
 
 #title-wrapper {
   width: 75%;
+  border: 1px solid #77b0ff;
+  border-radius: 15px;
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -125,7 +129,33 @@ body {
   color: #77b0ff;
 }
 
-#title-wrapper h4 {
+#hero-malaysia {
+  font-size: 1.8em;
+}
+
+.text-blue {
+  color: rgb(33, 30, 113);
+}
+
+.text-yellow {
+  color: rgb(230, 183, 0);
+}
+
+.text-red {
+  color: rgb(158, 16, 0);
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+#title-wrapper h2 {
+  /* font-family: "Roboto", sans-serif; */
+  color: #77b0ff;
+}
+
+#title-wrapper p {
+  font-family: "Roboto", sans-serif;
   color: #77b0ff;
 }
 

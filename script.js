@@ -58,7 +58,8 @@ function playRound() {
           .split("p")[0];
         if (
           (cloudPosTop <= crossPoint + 20) | (cloudPosTop <= crossPoint) &&
-          (leftBoundary <= cloudPosLeft && rightBoundary >= cloudPosLeft)
+          (leftBoundary + 10 <= cloudPosLeft &&
+            rightBoundary - 10 >= cloudPosLeft)
         ) {
           $(this).stop();
           $(this).animate(
@@ -75,9 +76,15 @@ function playRound() {
       complete: function() {
         lives--;
         if (lives == 0) {
+          $(`#api-5`).css("opacity", 1);
+          smokeOp = smokeOp + 0.2;
+          $(`#smokeImage`).css("opacity", smokeOp);
+          $(`#smokeImage-2`).css("opacity", smokeOp);
           clearInterval(play);
-          clearTimeout(timer);
-          $("#modal-container").fadeIn("slow");
+          clearInterval(timer);
+          $("#modal-container")
+            .delay(2000)
+            .fadeIn("slow");
         } else {
           $(`#api-${currentAPI}`).css("opacity", 1);
           smokeOp = smokeOp + 0.2;
@@ -106,10 +113,12 @@ $(document).ready(() => {
             rightBoundary = parseInt(e.target.style.left.split("p")[0]) + 50;
           }
         });
-        // Call Timer
-        startTimer();
-        // Call Play
-        startPlaying();
+        $("#fan-box").one("mousedown", () => {
+          // Call Timer
+          startTimer();
+          // Call Play
+          startPlaying();
+        });
       });
     });
   });
