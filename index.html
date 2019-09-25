@@ -25,40 +25,24 @@
     ></script>
     <script src="jquery.ui.touch-punch.min.js"></script>
     <title>NEXT Academy - Haze Away</title>
-    <meta property="og:url" content="https://haze-away.netlify.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="NEXT Academy - Haze Away" />
-    <meta
-      property="og:description"
-      content="Play Haze Away & save Malaysia from the Haze"
-    />
-    <meta
-      property="og:caption"
-      content="Play Haze Away & save Malaysia from the Haze"
-    />
-    <meta
-      property="og:message"
-      content="Play Haze Away & save Malaysia from the Haze"
-    />
-    <meta
-      property="og:image"
-      content="https://www.your-domain.com/path/image.jpg"
-    />
   </head>
   <body>
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src =
-          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
+    <div id="after-game">
+      <div id="after-modal">
+        <span id="close-button">&times;</span>
+        <h3 id="end-text"></h3>
+        <iframe
+          src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fhaze-game.netlify.com&layout=button_count&size=large&appId=766734900392465&width=84&height=28"
+          width="84"
+          height="28"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
+    </div>
     <div id="game-container">
       <div id="beforeGame">
         <div id="title-wrapper">
@@ -99,12 +83,12 @@
         <div id="fan-box"></div>
         <div id="malaysia-flag">
           <div id="smoke-overlay">
-            <img id="smokeImage-2" src="./images/smoke-2.png" alt="smoke2" />
             <img
-              id="smokeImage"
-              src="./images/smoke-overlay.png"
-              alt="smoke-overlay"
+              id="smokeImage-2"
+              src="./images/west malaysia.png"
+              alt="smoke2"
             />
+            <img id="smokeImage" src="./images/east.png" alt="smoke-overlay" />
           </div>
           <img
             src="./images/malaysia-country.png"
@@ -129,11 +113,6 @@
           Learn to code this with us using HTML, CSS, and JavaScript!
         </small>
       </div>
-      <!-- <div
-        class="fb-share-button"
-        data-href="https://haze-away.netlify.com"
-        data-layout="button_count"
-      ></div> -->
       <button
         id="learn-more-btn"
         onclick="window.location.href='https://www.nextacademy.com/?utm_source=game&utm_medium=button&utm_campaign=haze-away-matt'"

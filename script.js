@@ -40,7 +40,7 @@ function playRound() {
     gameSpeed -= 200;
   }
   $("#life-bar").after(
-    `<img id="cloud-${cloudCount}" class="haze-cloud" src="./images/haze-cartoon.png">`
+    `<img id="cloud-${cloudCount}" class="haze-cloud" src="./images/haze-attack.png">`
   );
   $(`#cloud-${cloudCount}`).css({ left: startPoint() });
   $(`#cloud-${cloudCount}`).animate(
@@ -82,9 +82,12 @@ function playRound() {
           $(`#smokeImage-2`).css("opacity", smokeOp);
           clearInterval(play);
           clearInterval(timer);
-          // $("#modal-container")
-          //   .delay(2000)
-          //   .fadeIn("slow");
+          $("#end-text").html(
+            `You have just saved Malaysia from the haze for ${time} days! <br /> Challenge your friends to beat your score!`
+          );
+          $("#after-game")
+            .delay(2000)
+            .fadeIn("slow");
         } else {
           $(`#api-${currentAPI}`).css("opacity", 1);
           smokeOp = smokeOp + 0.2;
@@ -100,7 +103,7 @@ function playRound() {
 
 $(document).ready(() => {
   $("#close-button").click(() => {
-    $("#modal-container").fadeOut("slow");
+    $("#after-game").fadeOut("slow");
   });
   $("#play-btn").click(() => {
     $("#beforeGame").fadeOut(1000, () => {
