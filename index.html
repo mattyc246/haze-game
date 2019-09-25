@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Mansalva&display=swap"
+      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -30,34 +25,40 @@
     ></script>
     <script src="jquery.ui.touch-punch.min.js"></script>
     <title>NEXT Academy - Haze Away</title>
+    <meta property="og:url" content="https://haze-away.netlify.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NEXT Academy - Haze Away" />
+    <meta
+      property="og:description"
+      content="Play Haze Away & save Malaysia from the Haze"
+    />
+    <meta
+      property="og:caption"
+      content="Play Haze Away & save Malaysia from the Haze"
+    />
+    <meta
+      property="og:message"
+      content="Play Haze Away & save Malaysia from the Haze"
+    />
+    <meta
+      property="og:image"
+      content="https://www.your-domain.com/path/image.jpg"
+    />
   </head>
   <body>
-    <div id="modal-container">
-      <div id="center-modal">
-        <button id="close-button" type="button">
-          &times;
-        </button>
-        <img
-          class="hero-image"
-          src="./images/next-academy-black.png"
-          alt="na-logo"
-        />
-        <div class="text-container">
-          <h4>
-            Want to build games like this? <br />
-            You can create games using HTML, CSS & JavaScript in just 2 weeks!
-            <br />
-            Join NEXT Academy to learn how to code games like this and more 😁
-          </h4>
-        </div>
-        <a
-          id="call-to-action"
-          href="https://www.nextacademy.com/?utm_source=game&utm_medium=modal&utm_campaign=save-the-haze-matt"
-          target="_blank"
-          >Take Me There</a
-        >
-      </div>
-    </div>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
     <div id="game-container">
       <div id="beforeGame">
         <div id="title-wrapper">
@@ -93,7 +94,7 @@
           <div id="api-3" class="api-box api-red"></div>
           <div id="api-4" class="api-box api-purple"></div>
           <div id="api-5" class="api-box api-maroon"></div>
-          <h5 id="timer">Days: 0</h5>
+          <h5 id="timer">| Days: 0</h5>
         </div>
         <div id="fan-box"></div>
         <div id="malaysia-flag">
@@ -108,11 +109,37 @@
           <img
             src="./images/malaysia-country.png"
             width="350"
+            style="opacity: 0;"
             alt="malaysia-flag"
             style="height: 100%;"
           />
         </div>
       </div>
+    </div>
+    <div id="footer">
+      <img
+        id="na-logo-footer"
+        src="./images/next-academy-black-notext.png"
+        alt="na-logo-black"
+        width="50"
+        height="50"
+      />
+      <div id="learn-text-container">
+        <small id="sm-footer-txt">
+          Learn to code this with us using HTML, CSS, and JavaScript!
+        </small>
+      </div>
+      <!-- <div
+        class="fb-share-button"
+        data-href="https://haze-away.netlify.com"
+        data-layout="button_count"
+      ></div> -->
+      <button
+        id="learn-more-btn"
+        onclick="window.location.href='https://www.nextacademy.com/?utm_source=game&utm_medium=button&utm_campaign=haze-away-matt'"
+      >
+        Learn More
+      </button>
     </div>
     <script src="script.js"></script>
   </body>

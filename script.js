@@ -19,7 +19,7 @@ function startPlaying() {
 function startTimer() {
   timer = setInterval(() => {
     time = time + 1;
-    $("#timer").html(`Time: ${time}`);
+    $("#timer").html(` | Days: ${time}`);
   }, 1000);
 }
 
@@ -82,9 +82,9 @@ function playRound() {
           $(`#smokeImage-2`).css("opacity", smokeOp);
           clearInterval(play);
           clearInterval(timer);
-          $("#modal-container")
-            .delay(2000)
-            .fadeIn("slow");
+          // $("#modal-container")
+          //   .delay(2000)
+          //   .fadeIn("slow");
         } else {
           $(`#api-${currentAPI}`).css("opacity", 1);
           smokeOp = smokeOp + 0.2;
