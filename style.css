@@ -293,7 +293,7 @@ body {
 }
 
 #footer {
-  max-width: 400px;
+  min-width: 400px;
   height: 80px;
   border-radius: 10px;
   margin-top: 10px;
