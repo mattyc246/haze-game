@@ -57,9 +57,9 @@ function playRound() {
           .css("left")
           .split("p")[0];
         if (
-          (cloudPosTop <= crossPoint + 20) | (cloudPosTop <= crossPoint) &&
-          (leftBoundary + 5 <= cloudPosLeft &&
-            rightBoundary - 5 >= cloudPosLeft)
+          (cloudPosTop <= crossPoint + 20) | (cloudPosTop == crossPoint) &&
+          (leftBoundary + 15 <= cloudPosLeft &&
+            rightBoundary - 10 >= cloudPosLeft)
         ) {
           $(this).stop();
           $(this).animate(

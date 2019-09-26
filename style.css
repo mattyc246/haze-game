@@ -6,6 +6,13 @@
 html {
   padding: 0;
   margin: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
 
 body {
@@ -113,6 +120,7 @@ body {
 }
 
 #malaysia-flag {
+  width: 100%;
   position: absolute;
   bottom: 2px;
   z-index: 1;
@@ -266,6 +274,7 @@ body {
 #learn-text-container {
   width: 50%;
   height: 50px;
+  text-align: center;
   align-self: center;
 }
 
@@ -318,6 +327,7 @@ body {
 }
 
 #play-again-btn {
+  cursor: pointer;
   width: 80%;
   height: 50px;
   background-color: rgb(200, 46, 53);
@@ -358,4 +368,8 @@ body {
 
 #end-text {
   clear: both;
+}
+
+#sm-footer-txt {
+  font-size: 0.75em;
 }
