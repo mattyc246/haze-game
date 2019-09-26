@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+      href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -25,50 +25,97 @@
     ></script>
     <script src="jquery.ui.touch-punch.min.js"></script>
     <title>NEXT Academy - Haze Away</title>
+    <meta
+      content="A mini game built with HTML, CSS and Javascript. Learn to code at Next Academy Now!"
+      name="description"
+    />
+    <meta content="Haze Away | Next Academy" property="og:title" />
+    <meta
+      content="https://ghgistmc.s3.us-east-2.amazonaws.com/facebook-haze.png"
+      property="og:image"
+    />
+    <meta property="og:url" content="https://haze-away.netlify.com/" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        setTimeout(() => {
+          d.getElementById("after-game").style.display = "none";
+          d.getElementById("after-game").style.opacity = "1";
+        }, 3000);
+      })(document, "script", "facebook-jssdk");
+    </script>
     <div id="after-game">
       <div id="after-modal">
         <span id="close-button">&times;</span>
         <h3 id="end-text"></h3>
-        <iframe
-          src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fhaze-game.netlify.com&layout=button_count&size=large&appId=766734900392465&width=84&height=28"
-          width="84"
-          height="28"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowTransparency="true"
-          allow="encrypted-media"
-        ></iframe>
+        <div id="btn-container">
+          <div
+            class="fb-share-button"
+            data-size="large"
+            data-href="https://haze-away.netlify.com"
+            data-layout="button_count"
+          ></div>
+          <a
+            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+            class="twitter-share-button"
+            data-size="large"
+            data-text="Hey! See if you can beat my score at saving Malaysia from the haze!"
+            data-url="https://nextmy.co/haze"
+            data-hashtags="hazemalaysia"
+            data-related="nextacademy_"
+            data-show-count="false"
+            >Tweet</a
+          >
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+        </div>
+        <button id="play-again-btn">Play Again?</button>
       </div>
     </div>
     <div id="game-container">
       <div id="beforeGame">
         <div id="title-wrapper">
           <h1 id="game-title">
-            Save
-            <span id="hero-malaysia"
-              ><span class="text-blue">Ma</span
-              ><span class="text-yellow">la</span
-              ><span class="text-red">ys</span
-              ><span class="text-white">ia</span></span
-            >
+            Save <span id="malaysia">Malaysia</span>
             From The Haze
           </h1>
           <h2>
-            <u>How to play:</u>
+            HOW TO PLAY:
           </h2>
-
-          <p>
-            Click and drag the fan from left to right (The game will start when
-            you first click on the fan)
-          </p>
-          <p>For mobile, tap and drag on the fan</p>
-          <p>Blow back the haze as it heads towards Malaysia</p>
-          <p>You have 5 misses until the API reaches Hazardous</p>
+          <div class="main-text">
+            <ol>
+              <li>
+                <small
+                  >Click and drag the fan from left to right (The game will
+                  start when you first click on the fan)</small
+                >
+              </li>
+              <li><small>For mobile, tap and drag on the fan</small></li>
+              <li>
+                <small>Blow back the haze as it heads towards Malaysia</small>
+              </li>
+              <li>
+                <small>You have 5 misses until the API reaches Hazardous</small>
+              </li>
+            </ol>
+          </div>
+          <button id="play-btn">PLAY</button>
         </div>
-        <button id="play-btn">Start Saving</button>
       </div>
       <div id="inGame" style="display:none;">
         <div id="life-bar">
@@ -100,6 +147,7 @@
         </div>
       </div>
     </div>
+
     <div id="footer">
       <img
         id="na-logo-footer"

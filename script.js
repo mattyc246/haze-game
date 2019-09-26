@@ -58,8 +58,8 @@ function playRound() {
           .split("p")[0];
         if (
           (cloudPosTop <= crossPoint + 20) | (cloudPosTop <= crossPoint) &&
-          (leftBoundary + 10 <= cloudPosLeft &&
-            rightBoundary - 10 >= cloudPosLeft)
+          (leftBoundary + 5 <= cloudPosLeft &&
+            rightBoundary - 5 >= cloudPosLeft)
         ) {
           $(this).stop();
           $(this).animate(
@@ -121,6 +121,9 @@ $(document).ready(() => {
           startTimer();
           // Call Play
           startPlaying();
+        });
+        $("#play-again-btn").click(() => {
+          location.reload();
         });
       });
     });
