@@ -83,7 +83,7 @@ function playRound() {
           clearInterval(play);
           clearInterval(timer);
           $("#end-text").html(
-            `You have just saved Malaysia from the haze for ${time} days! <br /> Challenge your friends to beat your score!`
+            `You have just saved Yourself from the haze for ${time} days! <br /> Challenge your friends to beat your score!`
           );
           $("#after-game")
             .delay(2000)
